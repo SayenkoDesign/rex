@@ -1,0 +1,13 @@
+.slick-slider {
+    visibility: hidden;
+    
+    &.slick-initialized {
+        visibility: visible;  
+    }
+    
+    .slick-slide {
+        &:focus {
+            outline: none;   
+       }   
+    }
+}

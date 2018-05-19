@@ -1,0 +1,76 @@
+// Leadership
+
+.section-rex-leadership {
+        
+    .column {
+         margin-bottom: rem-calc(map-get($grid-column-gutter, small)*2);
+            
+        @include breakpoint(large) {
+            margin-bottom: rem-calc(map-get($grid-column-gutter, large)*2);
+        }   
+    }
+
+    .panel {
+        position: relative;
+        
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 32px 30px 0;
+            border-color: transparent #ffffff transparent transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    
+    .description {
+        position: relative; 
+        padding-right: 60px;  
+        
+        a {
+           position: absolute;
+           top: 0;
+           right: 0; 
+           width: 42px;
+           height: 42px;
+           
+           svg {
+                fill: $blue;   
+           }
+        }
+    }
+    
+    .column-careers .panel {
+        background: $blue;
+        min-height: 300px;
+        
+        .text {
+            
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            padding-left: rem-calc(map-get($grid-column-gutter, small));
+            padding-right: rem-calc(map-get($grid-column-gutter, small));
+            
+            @include breakpoint(xxlarge) {
+                padding-left: rem-calc(map-get($grid-column-gutter, large)*2);
+                padding-right: rem-calc(map-get($grid-column-gutter, large)*2);
+            }
+            
+            
+            h3 {
+                color: #fff; 
+                
+                @include breakpoint(xlarge down) {
+                    font-size: (map-deep-get($header-styles, small, h3, font-size) * .75) + px;     
+                }
+            }
+        }
+    }
+    
+}

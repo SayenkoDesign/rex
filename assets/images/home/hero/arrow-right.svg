@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="36px" viewBox="0 0 21 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Right Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-1280.000000, -594.000000)" fill="#FFFFFF">
+            <g id="Group-7" transform="translate(1107.000000, 594.000000)">
+                <g id="Group-6" transform="translate(120.000000, 0.000000)">
+                    <path d="M53.6527836,35.3801338 C54.0766782,35.7859858 54.6573021,36 55.2150581,36 C55.772814,36 56.3523225,35.7859858 56.7759381,35.3801338 L73.3530031,19.499268 C73.7766187,19.093416 74,18.5590485 74,18.002772 C74,17.4475643 73.7766187,16.9131968 73.3530031,16.5060089 L56.7759381,0.625410285 C55.90556,-0.208470095 54.5231618,-0.208470095 53.6527836,0.625410285 C52.7824055,1.45929066 52.7824055,2.78372035 53.6527836,3.61760073 L68.6675741,18.002772 L53.6527836,32.3879433 C52.8052734,33.2218237 52.8052734,34.5681625 53.6527836,35.3801338 Z" id="Right-Arrow"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

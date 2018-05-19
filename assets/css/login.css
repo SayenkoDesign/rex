@@ -1,0 +1,10 @@
+/*Dashboard login screen*/
+
+.login h1 a {
+     background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 228px;
+	height: 50px;
+	outline: none;
+ }

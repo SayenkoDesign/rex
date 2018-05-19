@@ -1,0 +1,29 @@
+// Section Menu
+
+.section-menu {
+    
+    padding-top: 0;
+ 
+    .wrap {
+        width: 100%;
+        background: $green;   
+        text-align: center;
+        
+        
+        
+        ul {
+            display: inline-block;            
+            
+            li {
+                
+                padding: 0 15px;
+                
+                a {
+                    color: #fff;
+                    text-transform: uppercase;   
+                }
+            }
+        }
+    }
+    
+}

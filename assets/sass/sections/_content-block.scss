@@ -1,0 +1,30 @@
+/* CSS Document */
+
+.section-content-block {
+    
+    position: relative;
+ 
+    &.background-gray {
+        background-color: $light-gray;  
+        margin-top: 45px; 
+    }
+    
+    .column-block {
+        margin-bottom: rem-calc(45);   
+    }
+    
+    .two-column {
+    
+        @include breakpoint(large) {
+            
+            .column:first-child {
+                padding-right: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+            }
+            
+            .column:last-child {
+                padding-left: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+            }
+        }
+    }
+    
+}

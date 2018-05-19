@@ -1,0 +1,20 @@
+// Default Accordion styles
+
+.accordion {
+	margin: 0 auto;
+ }
+
+.accordion-item {
+	
+	list-style-type: none;
+	
+	.accordion-title {
+		display: block;
+		position: relative;
+	}
+}
+
+
+.accordion-content {
+		display: none;
+}

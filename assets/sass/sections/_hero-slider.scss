@@ -1,0 +1,165 @@
+
+
+.section-hero-slider {
+    
+    padding-top: 0;
+    
+    .royalSlider {
+        //min-height: 300px;   
+    }
+ 
+    .caption {
+        z-index: 9; 
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        max-width: 75%;
+        
+        @include breakpoint(medium) {
+            top: 10%;
+        }
+        
+        @include breakpoint(large) {
+            top: 25%;
+        }
+        
+        * {
+            color: #fff;   
+        }
+        
+        h1 {
+            font-size: rem-calc(map-deep-get($header-styles, large, h1, font-size)* .4); 
+            
+            @include breakpoint(medium) {
+                font-size: rem-calc(map-deep-get($header-styles, large, h1, font-size)* .6); 
+            }
+            
+            @include breakpoint(large) {
+                font-size: rem-calc(map-deep-get($header-styles, large, h1, font-size)); 
+            }
+            
+            @include breakpoint(xlarge) {
+                margin-bottom: 15px; 
+            }
+        }
+        
+        p {
+            font-size: 12px;
+            
+            @include breakpoint(medium) {
+                font-size: 16px;
+            }
+            
+            @include breakpoint(large) { 
+                font-size: 22px;
+                line-height: 30px;  
+            }
+        }
+
+    }
+    
+    a.plus {
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        z-index: 9;  
+        
+        @include breakpoint(large) {
+            bottom: 15%;
+            left: 5%;
+        }
+    }
+    
+    
+    @include breakpoint(small only) {
+        a.plus {
+            min-width: 16.5px;
+            min-height: 16.5px;
+            
+            span {
+                padding-left: 25px;  
+                min-height: 20px;
+                font-size: 10px;
+                line-height: 17px;
+            }
+
+            
+        }
+    }
+    
+    
+    .controls {
+        
+        position: absolute;
+        right: 5%;
+        bottom: 4%;
+        z-index: 98;   
+        
+        
+        > * {
+            display: inline-block!important;
+            position: relative;
+            left: auto;
+            right: auto;
+            top: auto;
+            bottom: auto;  
+            vertical-align: middle;
+        }
+        
+        .rsBullets {
+            text-align: left;
+            margin-top: 3px;
+            margin-right: 30px;
+            display: none!important;
+            
+            @include breakpoint(large) {
+                display: inline-block!important;
+            }
+        }
+        
+        .rsBullets, .rsLink{
+            width: auto;
+        }
+        
+        .rsArrow {
+            width: 21px;
+            height: 36px;
+            display: inline-block;  
+            margin: 0 10px; 
+            
+            @include breakpoint(small only) {
+                transform: scale(.5);
+            }
+        }
+    
+        .rsArrowIcn {
+            position: static;
+            left: auto;
+            right: auto;
+            top: auto;
+            bottom: auto;  
+            margin: 0;
+            padding: 0;
+            
+            &:before,
+            &:after {
+               left: auto;
+               right: auto; 
+               
+                width: 21px;
+                height: 36px;
+                line-height:36px;
+                background-size: 21px 36px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='36'%3E%3Cg id='Mockups' fill='none' fill-rule='evenodd'%3E%3Cg id='Home' fill='%23FFF' transform='translate%28-1280 -594%29'%3E%3Cg id='Group-7' transform='translate%281107 594%29'%3E%3Cg id='Group-6' transform='translate%28120%29'%3E%3Cpath id='Right-Arrow' d='M53.653 35.38a2.279 2.279 0 0 0 3.122 0L73.354 19.5A2.06 2.06 0 0 0 74 18.002c0-.555-.223-1.09-.647-1.497L56.776.626a2.262 2.262 0 0 0-3.123 0 2.04 2.04 0 0 0 0 2.992l15.015 14.385-15.015 14.385a2.078 2.078 0 0 0 0 2.992z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            }
+        }
+                        
+        .rsBullets span:hover,
+        .rsArrow:hover {
+            opacity: .8;
+        }
+        
+    
+    }
+    
+}

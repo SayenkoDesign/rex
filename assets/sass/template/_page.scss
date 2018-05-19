@@ -1,0 +1,48 @@
+html, body {
+	height: 100%;
+    background: $dark-gray;
+    
+    #content {
+        background: #fff;   
+    }
+      
+}
+
+body {
+   &:focus {
+      outline: none!important;
+   }
+}
+
+#wpadminbar {
+    z-index: 999999;   
+}
+
+
+button:focus {
+    outline: none;   
+}
+
+#primary section:last-child {
+    margin-bottom: 45px;   
+}
+
+
+.page-template-default {
+ 
+    h1 {
+        
+        margin-bottom: 10px;  
+                
+        &:before {
+            content: '';
+            display: block;
+            width: 54px;
+            height: 4px;
+            background: $green;
+            margin: 15px 0 0;   
+        }
+       
+    }
+    
+}

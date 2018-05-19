@@ -1,0 +1,65 @@
+// REX Culture
+
+.section-rex-culture {
+ 
+    .row {
+        max-width: 1000px;
+        margin: 0 auto; 
+        
+        .panel {
+            background-size: cover;
+            background-position: center;
+            display: block;
+            padding-top: 70%;
+            
+            position: relative;
+        
+            &:after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 32px 30px 0;
+                border-color: transparent #ffffff transparent transparent;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 3;
+            }
+            
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                background: rgba($blue,.6);
+            }
+            
+            .plus {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%); 
+                white-space: nowrap; 
+                z-index: 4; 
+            }
+            
+            &:hover {
+                
+                &:before {
+                    background: $blue;
+                }
+                
+                .plus {
+                    opacity: 1;   
+                }
+            }
+        }
+    }
+    
+}

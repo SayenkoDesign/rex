@@ -1,0 +1,21 @@
+//
+// Front Page
+//
+
+.home .hero {
+    
+    @include breakpoint(large) {
+        min-height: 480px;
+    }
+    
+    .entry-content {
+        max-width: 540px;
+        text-align: left;
+        
+        @include breakpoint(small only) {
+            text-align: center;
+        }
+        
+    }
+
+}

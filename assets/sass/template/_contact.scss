@@ -1,0 +1,11 @@
+/* CSS Document */
+
+.page-template-page-builder {
+    
+    iframe[src*="google"] {
+        @include breakpoint(large) {
+            height: 660px;
+        }
+    }
+	
+}

@@ -1,0 +1,274 @@
+/* CSS Document */
+
+.blog {
+    
+    @include breakpoint(large) {
+        #primary {
+            padding-bottom: 45px;   
+        }   
+    }
+    
+    .post-hero {
+        background: $gray;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;        
+        padding-top: 70%;
+     }
+    
+    article {
+        
+        border: 1px solid $gray;
+        
+        margin-bottom: rem-calc(map-get($grid-column-gutter, small)/2);
+        
+        &include breakpoint(large) {
+            margin-bottom: rem-calc(map-get($grid-column-gutter, large)/2);
+        }
+        
+        .entry-content, 
+        .entry-footer {
+            padding: rem-calc(map-get($grid-column-gutter, small)/2);  
+            
+            &include breakpoint(large) {
+                padding: rem-calc(map-get($grid-column-gutter, large)/2);  
+            }         
+        }
+        
+        .entry-footer {
+            padding-top: 0;   
+        }
+        
+        h3 {
+            text-transform: none; 
+            
+            a {
+                color: $dark-gray;
+                
+                &:hover {
+                    color: $green;   
+                }
+            }
+        }
+        
+        .more {
+            color: $green;
+            text-transform: uppercase;   
+        }
+    }
+   
+    
+}
+
+.blog .filters {
+    
+    margin: $global-margin ($global-padding/2 * -1) $global-margin;
+
+    @include breakpoint(medium) {
+        margin: $global-margin ($global-padding/2 * -1) 0;
+    }
+        
+        
+    > * {
+        display: block;
+        margin-bottom: 0!important; 
+         
+        padding: $global-padding ($global-padding/2);
+        
+        @include breakpoint(medium) {
+            display: inline-block;
+            margin-bottom: $global-margin!important; 
+        }
+    }
+    
+    select {
+        outline: none;
+        background-color: #fff;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        background-image: url("data:image/svg+xml;utf8,<svg width='16' height='9' viewBox='0 0 16 9' xmlns='http://www.w3.org/2000/svg'><title>Fill 4</title><path d='M.758.75C.588.91.5 1.13.5 1.343c0 .212.09.433.258.594l6.617 6.316c.17.16.392.246.624.246.23 0 .453-.085.622-.246l6.617-6.316c.347-.33.347-.858 0-1.19-.348-.33-.9-.33-1.247 0L8 6.47 2.004.75C1.658.427 1.097.427.758.75z' fill='#969696' fill-rule='evenodd'/></svg>");
+        background-position: 96% 50%;
+        background-repeat: no-repeat;
+        padding: 13px 30px;	
+        font-size: 13px;
+        border: 2px solid #969696;
+        height: 50px;
+    }
+}
+
+
+.facetwp-pager {
+    
+    @include clearfix;
+    margin-bottom: 45px;
+    
+    a {
+        padding: 0;   
+    }
+    
+    a:hover svg #arrow {
+        fill: $green;   
+    }
+ 
+    .previous {
+        svg {
+            transform: rotate(180deg);   
+        }
+    }
+    
+    .next {
+        float: right;
+    }
+    
+}
+
+
+.single-post {
+ 
+    .hero {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        margin-top: 0;
+    }
+    
+    .hero {
+        
+        &.flex {
+            position: relative;
+            
+            .wrap {            
+                padding: 75px 0;
+            }
+            
+            @include breakpoint(large) {
+                padding-top: 33%;
+            
+                .wrap {            
+                    padding: 75px 0;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        
+        
+        h1 {
+            color: #fff;
+            margin-bottom: 0;
+        }
+        
+        p {
+            color: #fff;  
+            font-size:20px;
+            line-height: 24px;    
+        }
+        
+        ul.post-categories {
+            @include list-reset;
+            margin: 0 0 $global-margin -12px;
+            text-align: center;
+            
+            li {
+                display: inline-block;
+                margin: 0 0 15px 12px;   
+            }
+            
+            a {
+                display: block;
+                padding: 13px 30px;
+                background-color: transparent;
+                text-align: center;
+                color: white;
+                font-size: 13px;
+                line-height: 1.5;
+                border: solid 2px $white;
+                transition: ease all 0.3s;
+                letter-spacing: 1px;
+                border-radius: $global-radius;
+                
+                &:hover {
+                    background-color: $white;
+                    color: $blue;   
+                }
+             }
+        }
+    }
+                
+    article {
+        
+        padding: 75px 0 0 0;
+        
+        .entry-content {
+            
+            h4:first-child {
+                line-height: 28px;  
+                margin-bottom: 40px;
+            }
+            
+            h4:first-child:first-letter {
+                font-size: 56px;
+                line-height: 42px; 
+                float: left;
+                padding-top: 8px;
+                padding-right: 8px;
+                padding-left: 3px;  
+            }
+        }
+        
+        
+    }
+    
+    
+    
+    .entry-footer {
+        padding: 40px 0 0;   
+        
+        h4 {
+            margin-bottom: 10px;   
+        }
+    }
+    
+    .entry-footer .column {
+        position: relative;
+    }
+    
+    
+    
+    .nav-links {
+        @extend .clear;
+        margin: 0 auto 45px;
+        position: relative;
+        z-index: 9;
+        
+        > div {
+            display: inline-block;
+            
+         }
+     
+        a {
+            &:hover svg #arrow {
+                fill: $green;   
+            }
+        }
+        
+         .nav-next svg {
+            transform: rotate(-180deg);
+        }
+        
+        .nav-previous {
+            float: right;
+        }
+        
+        .nav-next {
+            //float: right;
+        }
+        
+    }
+    
+}

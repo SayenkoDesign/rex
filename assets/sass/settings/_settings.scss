@@ -1,0 +1,127 @@
+//  Settings (includes overrides for sass/foundation/settings.scss)
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//   1. Global
+//   2. Breakpoints
+//   3. The Grid
+//   4. Base Typography
+//   5. Off Canvas Menu
+
+
+// 1. Global
+// ---------
+
+$global-font-size: 100%;
+$global-width: 1220px;
+$global-lineheight: 1.4;
+
+$black: #000;
+$white: #ffffff;
+
+$green: #008F4D;
+$blue: #15498C;
+$light-gray: #EFF3F1;
+$gray: #6A737B;
+$dark-gray: #252B33;
+
+$transition: ease all 0.3s;
+
+$body-background: #FFF;
+$body-font-color: $gray;
+$body-font-family: 'Nunito', sans-serif;
+
+
+$global-margin: 22px;
+$global-padding: 10px;
+$global-weight-normal: normal;
+$global-weight-bold: 700;
+$global-radius: 0;
+$global-text-direction: ltr;
+
+
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 980px,
+  xlarge: 1024px,
+  xxlarge: 1200px,
+  xxxlarge: 1440px
+);
+// must match $breakpoints
+$breakpoint-classes: (small medium large xlarge xxlarge xxxlarge);
+
+
+// 3. The Grid
+// -----------
+
+$grid-row-width: $global-width;
+$grid-column-count: 12; // usually 12
+$grid-column-gutter: (
+  small: 40px,
+  medium: 40px,
+  large: 20px
+);
+$grid-column-align-edge: true;
+$block-grid-max: 8;
+
+
+// 4. Base Typography
+// ---------
+
+$header-font-family: 'Nunito', sans-serif;
+$header-font-weight: 400;
+$header-font-style: normal;
+
+/// Styles for headings at various screen sizes. Each key is a breakpoint, and each value is a map of heading styles.
+/// @type Map
+$header-styles: (
+  small: (
+    'h1': ('font-size': 36, 'line-height': 1.36),
+    'h2': ('font-size': 36, 'line-height': 1.4),
+    'h3': ('font-size': 30, 'line-height': 1.37),
+    'h4': ('font-size': 24, 'line-height': 1.6),
+    'h5': ('font-size': 22, 'line-height': 1.57),
+    'h6': ('font-size': 20, 'line-height': 1.5),
+  ),
+  large: (
+    'h1': ('font-size': 43),
+    'h2': ('font-size': 43),
+    'h3': ('font-size': 30),
+    'h4': ('font-size': 24),
+    'h5': ('font-size': 22),
+    'h6': ('font-size': 20),
+  ),
+) !default;
+
+$header-color: $dark-gray;
+$header-lineheight: 1.4;
+$header-margin-bottom: 30px;
+$small-font-size: 14px;
+$header-small-font-color: $dark-gray;
+
+$paragraph-font-family: 'Nunito', sans-serif;
+$paragraph-font-style: normal;
+$paragraph-font-weight: normal;
+$paragraph-font-size: 16px;
+$paragraph-line-height: 22px;
+$paragraph-font-color: #454C54;
+$paragraph-margin-bottom: 22px;
+
+$anchor-color: $blue;
+$anchor-color-hover: scale-color($blue, $lightness: 20%);
+
+
+
+$accordionmenu-arrows: false;
+
+$tab-background: transparent;
+$tab-content-background: transparent;
+$tab-background-active: transparent;
+$tab-item-font-size: 16px;
+$tab-item-padding: 20px;
+$tab-content-padding: 20px;

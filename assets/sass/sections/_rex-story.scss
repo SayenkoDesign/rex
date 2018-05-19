@@ -1,0 +1,61 @@
+
+
+.section-rex-story {
+        
+    .expanded {
+        padding: 0 5%;   
+    }
+    
+    .royalSlider {
+        // min-height: 200px;   
+    }
+ 
+    .caption {
+        position: relative;
+        z-index: 9; 
+        background: #285c9b;
+        padding: rem-calc(map-get($grid-column-gutter, small)/2);
+  
+        @include breakpoint(xxlarge) {
+            background: transparent;
+            position: absolute;
+            left: 5%;
+            bottom: 0;
+            max-width: 30%;
+            padding: 0;
+        }
+        
+        @include breakpoint(xxxlarge) {
+            bottom: 15%;
+        }
+        
+        * {
+            color: #fff;   
+        }
+        
+        h1 {
+            margin-bottom: 10px;   
+        }
+        
+        .button-group {
+            margin-top: 10px;   
+        }
+        
+        @include breakpoint(large) { 
+            p {
+                font-size: 22px;
+                line-height: 30px;   
+            }
+        }
+ 
+    }
+    
+    a.plus {
+        margin-top: $global-margin;
+        
+        @include breakpoint(large down) {
+            margin-top: 10px;
+        }
+    }
+    
+}

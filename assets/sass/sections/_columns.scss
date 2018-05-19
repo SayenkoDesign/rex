@@ -1,0 +1,19 @@
+// Columns
+
+.section-columns {
+    
+    @include breakpoint(large) {
+        
+        .column-block {
+            margin-bottom: rem-calc(45);   
+        }
+        
+        .column:first-child {
+            padding-right: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+        }
+        
+        .column:last-child {
+            padding-left: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+        }
+    }
+}

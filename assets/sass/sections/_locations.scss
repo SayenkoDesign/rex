@@ -1,0 +1,73 @@
+// Locations
+
+
+.section-locations {
+ 
+    .panel {
+        position: relative;
+        
+        padding: 32px;
+        
+        .title-address {
+            margin-bottom: 20px;   
+        }
+        
+        .address {
+            padding-left: 24px;
+            position: relative;
+            
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;    
+            }
+        }
+                
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 32px 30px 0;
+            border-color: transparent #ffffff transparent transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 3;
+        }
+        
+        h4 {
+            line-height: 1.2;
+            font-weight: 700;   
+            margin-bottom: 15px;
+            min-height: 56px;
+        }
+        
+        h4,
+        p,
+        a {
+            color: #fff;   
+        }
+        
+        p {
+            font-size: 20px;               
+        }
+    }
+    
+    .column {
+        
+        &:first-child .panel {
+            background: $blue;
+        }
+        
+        &:nth-child(2) .panel {
+            background: $green;
+        }
+        
+        &:nth-child(3) .panel {
+            background: $gray;
+        }
+    }
+    
+}

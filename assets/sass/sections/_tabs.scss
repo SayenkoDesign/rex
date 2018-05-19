@@ -1,0 +1,139 @@
+/* CSS Document */
+
+.section-tabs {
+    
+    .expanded {
+        padding-left: 5%;
+        padding-right: 5%;   
+    }
+    
+    .row {
+        @include breakpoint(medium down) {
+            background-image: none!important;
+        }
+        
+        
+        @include breakpoint(large) {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left 66px;   
+        } 
+    }
+    
+    .accordion {
+        
+        .accordion-title {
+            background: $blue;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 900;   
+            text-transform: uppercase; 
+            
+            &:hover {
+                background: $blue;   
+            }
+        }
+        
+        .accordion-content {
+            //background: $blue;   
+            
+            * {
+                //color: #fff;   
+            }
+            
+            p {
+                font-size: 22px;
+                line-height:30px;
+            }
+            
+            .plus span {
+                color: $green;
+                
+                &:before,
+                &:after {
+                    background: $green;   
+                }
+            }
+        }
+    }
+    
+    .tabs {
+        
+        background: #fff;
+        width: 100%;
+        margin-left: -20px;
+                
+        .tabs-title {
+            
+            padding-bottom: 10px;
+            
+            a {
+                color: $dark-gray;  
+                text-transform: uppercase; 
+            }
+            
+            &:after {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 27px 23px 27px;
+                border-color: transparent transparent $green transparent;  
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%); 
+            }
+            
+            &.is-active {
+                position: relative;
+                 
+                a {
+                    color: $green;
+                    font-weight: 900;   
+                }
+                
+                @include breakpoint(large) {
+                    &:after {
+                        content: '';
+                    }   
+                }
+            }
+        }
+    }
+    
+    .tabs-content {
+        min-height: 300px;
+        border: none;
+          
+        @include breakpoint(large down) {
+            background-image: none!important;
+        }
+        
+        @include breakpoint(xxlarge) {
+            min-height: 600px;
+        }
+        
+        .tabs-panel {
+            
+            padding-top: 5%;
+            padding-left: 0;
+            padding-right: 0;
+            
+            * {
+                color: #fff;   
+            }
+            
+            p {
+                font-size: 22px;
+                line-height:30px;
+            }
+            
+            
+            @include breakpoint(large) {
+                padding-top: 18%;
+                max-width: 50%;
+            }
+        }
+        
+    }
+}

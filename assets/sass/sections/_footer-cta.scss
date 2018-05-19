@@ -1,0 +1,97 @@
+// Footer CTA
+
+.section-footer-cta {
+ 
+    background-color: $blue;
+    background-image: url(assets/images/footer-cta/background.jpg);
+    background-size: cover;
+    
+    padding-top: 0;
+    
+    @include breakpoint(large) {
+        border-top: solid 75px #fff;   
+    }
+    
+    position: relative;
+    z-index: 2;
+    
+    .row {
+        padding-top: 75px;
+        padding-bottom: 400px;
+        
+        
+        @include breakpoint(large) {
+            padding-right: 260px;
+            padding-bottom: 105px;
+        }
+    }
+    
+    .row {
+        
+        position: relative;
+        
+        &:before {
+            content: '';
+            display: block;
+            width: 295px;
+            height: 375px;
+            background-image: url(assets/images/footer-cta/employee.png);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: contain;
+            position: absolute;
+            bottom: 20px;
+            right: 50%;
+            transform: translateX(50%);
+            z-index: 2;
+            
+            @media all and (-webkit-min-device-pixel-ratio : 1.5),
+             all and (-o-min-device-pixel-ratio: 3/2),
+             all and (min--moz-device-pixel-ratio: 1.5),
+             all and (min-device-pixel-ratio: 1.5) {
+                background-image: url(assets/images/footer-cta/employee@2x.png);
+            }
+            
+            @include breakpoint(large) {
+                right: 0;
+                transform: none;
+            }
+        }
+                
+        
+    }
+    
+    .column {    
+    
+        margin-bottom: $global-margin;   
+        
+        text-align: center;
+        
+        h2,
+        p,
+        a { 
+            color: #fff; 
+        }
+        
+        h2,
+        p {
+           margin: 0; 
+           text-transform: uppercase;
+        }
+        
+        h2 {
+            &:after {
+                display: none;   
+            }
+        }
+        
+        p {
+            font-size: 30px;
+            line-height: 50px;
+        }
+        
+        a {
+            display: inline-block;   
+        }
+    }
+}

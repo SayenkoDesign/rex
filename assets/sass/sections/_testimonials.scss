@@ -1,0 +1,104 @@
+// Testimonials
+
+
+.section-testimonials {
+    
+    margin-bottom: 45px;
+    
+    .quote-mark {
+        height: auto;
+        
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        margin: 15px auto 40px;
+        &:before,
+        &:after {
+            content: "";
+            flex-grow: 1;
+            background: $green;
+            height: 1px;
+            font-size: 0px;
+            line-height: 0px;
+            margin: 0px 15px;
+        }
+        
+        span {
+            width: 56px;
+            height: 46px;
+            background-image: url(assets/images/icons/quote.png);
+            background-size: 56px 46px;   
+        }
+    }
+
+    .royalSlider {
+        padding: 0;
+        
+        max-width: 840px;
+        margin: 0 auto 10px;
+        text-align: center;
+        
+        @include breakpoint(large) {
+            margin-bottom: 0;  
+            padding: 0 50px;
+        }
+           
+    }
+    
+    .rsDefault .rsArrow {	
+        bottom: 0px; 
+        
+        @include breakpoint(large) {
+            bottom: 0;   
+        }
+    }
+    
+    .rsDefault .rsArrowLeft .rsArrowIcn {	
+        //left: 0;
+         
+        @include breakpoint(large) {
+            left: -100px;
+        }
+    }
+    
+    .rsDefault .rsArrowRight .rsArrowIcn {	
+        //right: 0;
+         
+        @include breakpoint(large) {
+            right: -100px;
+        }
+    }
+    
+    
+    blockquote {
+        border: none;
+        
+        h4 {
+            text-transform: none;
+            font-weight: 300; 
+            margin-top: 40px;  
+        }
+        
+        min-height: 400px;
+                    
+        
+        @include breakpoint(medium down) {
+            
+            p {
+                font-size: 20px; 
+                
+            }
+            
+            h4 {
+                font-size: (map-deep-get($header-styles, small, h4, font-size) * .75) + px; 
+            }
+        }
+        
+        @include breakpoint(large) {
+            p {
+                font-size: 30px;     
+            }
+        }
+    }
+    
+}

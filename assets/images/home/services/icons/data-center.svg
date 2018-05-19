@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="50">
+  <defs>
+    <path id="path-1" d="M23.266.145H.083V50H46.45V.145z"/>
+  </defs>
+  <g id="Mockups" fill="none" fill-rule="evenodd">
+    <g id="Home-&gt;-Electrical-Service-&gt;-Hover" transform="translate(-199 -323)">
+      <g id="Group-2" transform="translate(193 104)">
+        <g id="stacked-storage-device" transform="translate(6 219)">
+          <g id="Data-Centers">
+            <mask id="mask-2" fill="#fff">
+              <use xlink:href="#path-1"/>
+            </mask>
+            <path id="Fill-3" fill="#FFF" d="M8.056 12.737h6.907V5.678H8.056v7.059zm2.215-2.26h2.484v-2.54h-2.484v2.54z" mask="url(#mask-2)"/>
+            <path id="Fill-5" fill="#FFF" d="M0 50h46.45V.145H0V50zm2.215-2.26h42.02V34.135H2.215v13.607zm0-15.864h42.02v-13.6H2.215v13.6zm0-15.865h42.02V2.41H2.215v13.6z" mask="url(#mask-2)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

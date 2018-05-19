@@ -1,0 +1,225 @@
+/*
+Header
+---------------------------------------------- */
+
+// Fix for sticky header
+.logged-in .site-header.fixed {
+    top: 46px;
+
+    @media screen and (min-width: 783px) {
+        top: 32px;
+    }      
+ }
+
+
+.site-header {
+     
+    background: #fff;
+    width: 100%;
+    z-index: 999;
+        
+    .wrap {
+          
+         .columns {
+            position: relative;   
+            
+        }
+        
+        .site-branding {
+            text-align: center;
+            
+            @include breakpoint(large) {
+                text-align: left;   
+            }
+        }
+                
+        .site-title {
+            
+            display: inline-block;
+            
+            padding: 14px 40px;
+            
+            img {
+                height: 70px; 
+                width: auto;  
+            }
+            
+            
+            @include breakpoint(medium) {
+                padding-left: rem-calc(map-get($grid-column-gutter, medium) /2 );  
+            }
+            
+            @include breakpoint(large) {
+                padding-left: 0;  
+                padding-right: 0; 
+                
+                img {
+                    height: auto;   
+                }
+            }
+            
+            a {
+                display: block;   
+                
+                svg {
+                    width: 228px;   
+                }
+            }
+        }
+                         
+    }
+    
+    .header-widgets {
+        
+        display: none;
+        
+        @include breakpoint(large) {
+            display: block;
+            position: absolute;
+            top: 2px;
+            right: 0;
+            
+            > * {
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+            a[href^="tel:"] {
+                color: $blue;
+                font-size: 21px;
+                line-height: 28px;
+                margin: 4px 15px 4px 0;
+            }
+        }
+                
+        
+        
+        
+        .widget_nav_menu {
+                        
+            .widget-title {
+                display: none;   
+            }
+            
+            ul {
+                @include list-reset;  
+                position: relative;
+                @include clearfix;
+                
+                 
+                li {
+                    position: relative;
+                    z-index: 2;
+                    padding: 0 5px 0 0;
+                                        
+                    &:first-child a {
+                        @extend .button;
+                        @extend .blue-alt;
+                    }
+                    
+                    
+                    &:last-child a {
+                        @extend .button;
+                        @extend .green;
+                    }
+                    
+                    a {
+                        min-width: inherit!important;
+                        padding: 6px 25px!important;
+                    }
+                    
+                }
+            }
+        }
+          
+    }
+    
+    .mobile-phone {
+        position: absolute;
+        top: 24px;
+        left: rem-calc(map-get($grid-column-gutter, small) /2 );  
+        z-index: 999;   
+    }
+    
+    .menu-toggle {
+        position: absolute;
+        top: 24px;
+        right: rem-calc(map-get($grid-column-gutter, small) /2 );  
+        z-index: 999;
+        
+        @include breakpoint(medium) {
+            right: rem-calc(map-get($grid-column-gutter, medium) /2 );  
+        }
+    }
+    
+    
+    /*
+    &:not(.fixed) {
+        
+        @include breakpoint(large) {
+            position: relative;
+            line-height: 0;
+            
+            &:after {
+                content: url('data:image/svg+xml;utf8,<svg  viewBox="0 0 1440 27" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd">
+            <path d="M411.09 9.298C856.422 25.541 1174.724 20 1439.34.07c51.405-3.872 51.546 2.772.423 19.931H0C9.944 3.232 146.974-.335 411.09 9.298z" fill="#D7D5D5"/>
+            <path d="M.752 1.5c449.505 25.5 389.72 11.208 919.871 0C1065.306-1.559 1238.432 3.041 1440 15.3V27H.752c-299.67-34-299.67-42.5 0-25.5z" fill="#0081C6"/>
+          </g>
+        </svg>');
+                
+                width: 100%;
+                height: auto;
+                
+            }
+        }
+    }*/
+    
+}
+
+
+.site-header {
+
+	&.fixed {
+		display: none;
+		
+		@media #{$xlarge-up} {
+      		display: block;
+		}
+		
+		transition: transform .25s ease-in-out;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 999;
+		transform: translateY(-150%);
+		background-color: white;
+		box-shadow: 0px 1px 4px #888888;	
+        
+        .wrap {
+            position: relative;
+            top: auto;   
+        }
+        
+        .widget_text {
+            
+            .widget-title {
+                color: $blue;
+            }
+            
+            > div {
+                a {
+                    color: $blue; 
+                }
+            }
+            
+        }
+
+	}
+
+	&.fixed.fixed-show {
+		transform: translateY(0);
+	}
+}

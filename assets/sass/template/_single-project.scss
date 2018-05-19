@@ -1,0 +1,145 @@
+// Single Project
+
+.single-project {
+ 
+    .section-hero {
+     
+        .caption {
+            max-width: 40%;   
+        }
+        
+    }
+    
+    .entry-content {
+        padding: 45px 0 0;   
+        
+        h2 {
+            text-transform: none; 
+            margin-bottom: 20px;  
+        }
+        
+        .details {
+            
+            padding-top: 30px;
+            
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size: rem-calc(22);   
+                text-transform: uppercase;
+            }
+        }
+        
+        h5 {
+            text-transform: uppercase;
+            margin-bottom: 10px;   
+        }
+        
+        ul.services {
+            li {
+                position: relative;
+                
+                min-height: 21px;
+                padding: 0 0 5px 34px;
+                line-height: inherit;
+                margin-bottom: 5px;
+                
+                &:before {
+                    content: '';
+                    width: 21px;
+                    height: 21px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0;
+                    background: $green;
+                    border-radius: 50%;
+                }
+                
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    border: solid #fff;
+                    border: solid #fff;
+                    border-width: 0 1px 1px 0;
+                    transform: rotate(-45deg);
+                    width: 6px;
+                    height: 6px;  
+                    position: absolute;
+                    top: 7.5px;
+                    left: 6px; 
+                }
+        
+                a {
+                    color: $gray;
+                    text-decoration: none;  
+                    
+                    &:hover {
+                        color: $green;   
+                    }
+                }
+            }   
+        }
+    }
+    
+    
+    .gallery {
+
+        margin: 0 rem-calc(-6)!important;   
+        
+        .column {
+            padding: 0 rem-calc(6);  
+            margin-bottom: rem-calc(12);
+        }
+     
+        .photo {
+            padding-top: 68%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+                
+            &:after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 32px 30px 0;
+                border-color: transparent #ffffff transparent transparent;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 3;
+            }
+                  
+        }
+        
+    }
+    
+    .section-testimonials h2 {
+        font-size: rem-calc(30);
+        margin-bottom: $global-margin * 2;
+        text-align: center;
+        text-transform: uppercase;
+        
+        &:before {
+            content: '';
+            display: block;
+            width: 54px;
+            height: 4px;
+            background: $green;
+            margin: 0 auto 10px;   
+        }
+        
+        &.text-left {
+            
+            text-align: left;
+            
+            &:before {
+                margin: 0 0 10px; 
+            }
+        }
+    }
+    
+}
